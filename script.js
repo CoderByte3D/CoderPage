@@ -1,4 +1,4 @@
-// Animación de scroll suave y efectos básicos
+// ===== HEADER =====
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   if (window.scrollY > 50) {
@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Animación de secciones al hacer scroll
+// ===== SECCIONES ANIMADAS =====
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section');
 
@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', checkSections);
-  checkSections(); // Para mostrar las secciones que ya están visibles al cargar
+  checkSections(); // para mostrar secciones ya visibles al cargar
 });
