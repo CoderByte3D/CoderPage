@@ -178,17 +178,25 @@ section h2 {
 }
 
 .social img, .project img {
-  width: 80px;
-  height: 80px;
-  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   margin-bottom: 10px;
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
 .social:hover, .project:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(255,79,246,0.4);
+}
+
+.social-name {
+  font-family: 'Audiowide', cursive; /* tipografía guapa */
+  font-size: 1rem;
+  color: #ff4ff6;
+  text-shadow: 0 0 8px #8b6fff;
+  margin: 0;
 }
 
 /* ===== FOOTER ===== */
@@ -200,4 +208,5 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 
