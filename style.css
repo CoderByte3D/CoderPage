@@ -34,18 +34,26 @@ header {
   border: 2px solid #ff4ff6;
   box-shadow: 0 0 20px #ff4ff6;
   margin-right: 15px;
+  animation: logoFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoFloat {
+  0% { transform: rotate(-5deg) translateY(0); }
+  50% { transform: rotate(5deg) translateY(-5px); }
+  100% { transform: rotate(-5deg) translateY(0); }
 }
 
 .title {
   font-family: 'Audiowide', sans-serif;
   font-size: 1.8rem;
   color: #ff4ff6;
-  animation: neonPulse 3s infinite alternate;
+  animation: neonPulse 3s infinite alternate, floatTitle 3s ease-in-out infinite alternate;
 }
 
-@keyframes neonPulse {
-  0% { text-shadow: 0 0 5px #ff4ff6, 0 0 10px #ff4ff6; }
-  100% { text-shadow: 0 0 20px #4fafff, 0 0 40px #4fafff; }
+@keyframes floatTitle {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
 nav a {
@@ -90,6 +98,14 @@ section {
   margin: 0 auto;
   padding: 100px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section h2 {
@@ -98,6 +114,7 @@ section h2 {
   font-size: 2rem;
   margin-bottom: 25px;
   text-shadow: 0 0 20px #ff4ff6;
+  animation: neonPulse 3s infinite alternate;
 }
 
 .card {
@@ -142,3 +159,4 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+
