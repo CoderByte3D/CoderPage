@@ -27,6 +27,7 @@ header {
   align-items: center;
 }
 
+/* ===== LOGO ANIMADO ===== */
 .logo {
   width: 55px;
   height: 55px;
@@ -43,6 +44,7 @@ header {
   100% { transform: rotate(-5deg) translateY(0); }
 }
 
+/* ===== TÍTULO ANIMADO ===== */
 .title {
   font-family: 'Audiowide', sans-serif;
   font-size: 1.8rem;
@@ -54,6 +56,11 @@ header {
   0% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 5px #ff4ff6, 0 0 10px #ff4ff6; }
+  100% { text-shadow: 0 0 20px #4fafff, 0 0 40px #4fafff; }
 }
 
 nav a {
@@ -92,7 +99,7 @@ nav a:hover {
   }
 }
 
-/* ===== SECCIONES ===== */
+/* ===== SECCIONES CENTRADAS ===== */
 section {
   max-width: 900px;
   margin: 0 auto;
@@ -117,6 +124,7 @@ section h2 {
   animation: neonPulse 3s infinite alternate;
 }
 
+/* ===== TARJETAS ===== */
 .card {
   background: rgba(20, 20, 50, 0.8);
   border-radius: 15px;
@@ -159,4 +167,3 @@ footer {
   background: rgba(10, 10, 25, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
-
